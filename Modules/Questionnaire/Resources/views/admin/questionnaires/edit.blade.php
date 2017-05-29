@@ -14,7 +14,7 @@
 @section('styles')
     {!! Theme::script('js/vendor/ckeditor/ckeditor.js') !!}
 @stop
-<?php print_r($questionnaire->id);  ?>
+
 @section('content')
     {!! Form::open(['route' => ['admin.questionnaire.questionnaire.update', $questionnaire->id], 'method' => 'put']) !!}
     <div class="row">
