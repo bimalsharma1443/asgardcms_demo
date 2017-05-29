@@ -1,0 +1,11 @@
+<div class="box-body">
+    <p>
+        <div class="box-body">
+	    {!! Form::text('question','Question',  array('required', 
+              'class'=>'form-control', 
+              'placeholder'=>'Your e-mail address',
+              'value'=>'a')) !!}
+	    {!! Form::normalTextarea('answer', 'Answer', $errors) !!}
+	</div>
+    </p>
+</div>

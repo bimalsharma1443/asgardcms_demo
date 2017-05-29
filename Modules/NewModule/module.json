@@ -1,0 +1,16 @@
+{
+    "name": "NewModule",
+    "alias": "newmodule",
+    "description": "",
+    "version": "v0.1",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\NewModule\\Providers\\NewModuleServiceProvider"
+    ],
+    "aliases":{},
+    "files": [
+        "start.php"
+    ]
+}
