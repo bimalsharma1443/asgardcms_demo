@@ -66,6 +66,7 @@ class QuestionnaireController extends AdminBaseController
      */
     public function edit(Questionnaire $questionnaire)
     {
+        // print_r($questionnaire['id']); die;
         return view('questionnaire::admin.questionnaires.edit', compact('questionnaire'));
     }
 
@@ -100,4 +101,17 @@ class QuestionnaireController extends AdminBaseController
 
         return redirect()->route('admin.questionnaire.questionnaire.index');
     }
+
+
+public function unset_data(Questionnaire $questionnaire)
+    {
+        $this->questionnaire->destroy($questionnaire);
+
+        flash()->success(trans('core::core.messages.resource deleted', ['name' => trans('questionnaire::questionnaires.title.questionnaires')]));
+
+        return redirect()->route('admin.questionnaire.questionnaire.index');
+    }
+
+
+
 }

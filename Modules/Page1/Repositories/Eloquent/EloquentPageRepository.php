@@ -54,7 +54,7 @@ class EloquentPageRepository extends EloquentBaseRepository implements PageRepos
             $this->removeOtherHomepage($model->id);
         }
         $model->update($data);
-	
+
         event(new PageWasUpdated($model->id, $data));
 
         return $model;

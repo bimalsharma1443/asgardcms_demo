@@ -80,6 +80,7 @@ class QuestionnaireController extends AdminBaseController
     public function update(Questionnaire $questionnaire, UpdateQuestionnaiteRequest $request)
 
     {
+
         $this->questionnaire->update($questionnaire, $request->all());
 
         flash()->success(trans('core::core.messages.resource updated', ['name' => trans('questionnaire::questionnaires.title.questionnaires')]));
@@ -101,4 +102,17 @@ class QuestionnaireController extends AdminBaseController
 
         return redirect()->route('admin.questionnaire.questionnaire.index');
     }
+
+
+public function unset_data(Questionnaire $questionnaire)
+    {
+        $this->questionnaire->destroy($questionnaire);
+
+        flash()->success(trans('core::core.messages.resource deleted', ['name' => trans('questionnaire::questionnaires.title.questionnaires')]));
+
+        return redirect()->route('admin.questionnaire.questionnaire.index');
+    }
+
+
+
 }

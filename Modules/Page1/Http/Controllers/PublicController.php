@@ -29,11 +29,10 @@ class PublicController extends BasePublicController
     public function uri($slug)
     {
         $page = $this->page->findBySlugInLocale($slug, $this->locale);
-
+	
         $this->throw404IfNotFound($page);
 
         $template = $this->getTemplateForPage($page);
-
         return view($template, compact('page'));
     }
 

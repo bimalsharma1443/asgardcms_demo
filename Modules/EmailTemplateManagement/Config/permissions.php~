@@ -1,0 +1,14 @@
+<?php
+
+return [
+    'emailtemplatemanagement.email_templates' => [
+        'index',
+        'create',
+        'store',
+        'edit',
+        'update',
+        'destroy',
+    ],
+// append
+
+];

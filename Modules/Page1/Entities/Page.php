@@ -45,7 +45,7 @@ class Page extends Model
     {
         #i: Convert array to dot notation
         $config = implode('.', ['asgard.page.config.relations', $method]);
-	
+
         #i: Relation method resolver
         if (config()->has($config)) {
             $function = config()->get($config);
